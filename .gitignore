@@ -52,3 +52,9 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+
+# Local secrets and machine-specific config
+.env
+.env.*
+*.Local.json
+AgentMessenger.Console/appsettings.Local.json

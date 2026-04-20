@@ -17,3 +17,12 @@ public sealed record Message(
     IReadOnlyDictionary<string, string> Metadata);
 
 public sealed record SendResult(bool Success, string? ErrorMessage = null);
+
+public sealed record AgentInfo(
+    string Id,
+    string Identity,
+    string DisplayName,
+    string Email,
+    string? Provider = null,
+    string? Model = null,
+    string? ApiKeyEnvironmentVariable = null);

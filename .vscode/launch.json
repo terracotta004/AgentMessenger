@@ -1,0 +1,326 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "AgentMessenger: help",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/AgentMessenger.Console/bin/Debug/net10.0/AgentMessenger.Console.dll",
+            "args": [
+                "help"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "stopAtEntry": false,
+            "env": {
+                "AGENT_MESSENGER_CONFIG": "${workspaceFolder}/AgentMessenger.Console/appsettings.json"
+            }
+        },
+        {
+            "name": "AgentMessenger: agents list",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/AgentMessenger.Console/bin/Debug/net10.0/AgentMessenger.Console.dll",
+            "args": [
+                "agents",
+                "list"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "stopAtEntry": false,
+            "env": {
+                "AGENT_MESSENGER_CONFIG": "${workspaceFolder}/AgentMessenger.Console/appsettings.json"
+            }
+        },
+        {
+            "name": "AgentMessenger: agents register ops",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/AgentMessenger.Console/bin/Debug/net10.0/AgentMessenger.Console.dll",
+            "args": [
+                "agents",
+                "register",
+                "--identity",
+                "agent:ops",
+                "--display-name",
+                "Ops Agent",
+                "--provider",
+                "OpenAI",
+                "--model",
+                "gpt-5.4",
+                "--system-prompt",
+                "You coordinate operations work and respond clearly to humans and other agents.",
+                "--api-key-env",
+                "OPENAI_API_KEY"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "stopAtEntry": false,
+            "env": {
+                "AGENT_MESSENGER_CONFIG": "${workspaceFolder}/AgentMessenger.Console/appsettings.json"
+            }
+        },
+        {
+            "name": "AgentMessenger: agents register Gemini research",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/AgentMessenger.Console/bin/Debug/net10.0/AgentMessenger.Console.dll",
+            "args": [
+                "agents",
+                "register",
+                "--identity",
+                "agent:research",
+                "--display-name",
+                "Research Agent",
+                "--provider",
+                "Gemini",
+                "--model",
+                "gemini-pro",
+                "--system-prompt",
+                "You research questions, summarize tradeoffs, and cite uncertainty when needed.",
+                "--api-key-env",
+                "GEMINI_API_KEY"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "stopAtEntry": false,
+            "env": {
+                "AGENT_MESSENGER_CONFIG": "${workspaceFolder}/AgentMessenger.Console/appsettings.json"
+            }
+        },
+        {
+            "name": "AgentMessenger: agents update identity",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/AgentMessenger.Console/bin/Debug/net10.0/AgentMessenger.Console.dll",
+            "args": [
+                "agents",
+                "update",
+                "--identity",
+                "agent:assistant",
+                "--new-identity",
+                "agent:openai",
+                "--display-name",
+                "OpenAI Agent",
+                "--api-key-env",
+                "OPENAI_API_KEY",
+                "--sync-maui"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "stopAtEntry": false,
+            "env": {
+                "AGENT_MESSENGER_CONFIG": "${workspaceFolder}/AgentMessenger.Console/appsettings.json"
+            }
+        },
+        {
+            "name": "AgentMessenger: agents sync agent:openai MauiMessenger",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/AgentMessenger.Console/bin/Debug/net10.0/AgentMessenger.Console.dll",
+            "args": [
+                "agents",
+                "sync",
+                "--identity",
+                "agent:openai"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "stopAtEntry": false,
+            "env": {
+                "AGENT_MESSENGER_CONFIG": "${workspaceFolder}/AgentMessenger.Console/appsettings.json"
+            }
+        },
+        {
+            "name": "AgentMessenger: agents sync agent:gemini MauiMessenger",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/AgentMessenger.Console/bin/Debug/net10.0/AgentMessenger.Console.dll",
+            "args": [
+                "agents",
+                "sync",
+                "--identity",
+                "agent:gemini"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "stopAtEntry": false,
+            "env": {
+                "AGENT_MESSENGER_CONFIG": "${workspaceFolder}/AgentMessenger.Console/appsettings.json"
+            }
+        },
+        {
+            "name": "AgentMessenger: agents check OpenAI key",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/AgentMessenger.Console/bin/Debug/net10.0/AgentMessenger.Console.dll",
+            "args": [
+                "agents",
+                "check-key",
+                "--identity",
+                "agent:openai"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "stopAtEntry": false,
+            "env": {
+                "AGENT_MESSENGER_CONFIG": "${workspaceFolder}/AgentMessenger.Console/appsettings.json"
+            }
+        },
+        {
+            "name": "AgentMessenger: agents check Gemini key",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/AgentMessenger.Console/bin/Debug/net10.0/AgentMessenger.Console.dll",
+            "args": [
+                "agents",
+                "check-key",
+                "--identity",
+                "agent:gemini"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "stopAtEntry": false,
+            "env": {
+                "AGENT_MESSENGER_CONFIG": "${workspaceFolder}/AgentMessenger.Console/appsettings.json"
+            }
+        },
+        {
+            "name": "AgentMessenger: human to agent email",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/AgentMessenger.Console/bin/Debug/net10.0/AgentMessenger.Console.dll",
+            "args": [
+                "send",
+                "--from",
+                "user@example.com",
+                "--to",
+                "agent:planner",
+                "--channel",
+                "Email",
+                "--subject",
+                "Question",
+                "--body",
+                "Can you draft a plan?"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "stopAtEntry": false,
+            "env": {
+                "AGENT_MESSENGER_CONFIG": "${workspaceFolder}/AgentMessenger.Console/appsettings.json"
+            }
+        },
+        {
+            "name": "AgentMessenger: agent to agent MauiMessenger (OpenAI to Gemini)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/AgentMessenger.Console/bin/Debug/net10.0/AgentMessenger.Console.dll",
+            "args": [
+                "send",
+                "--from",
+                "agent:openai",
+                "--to",
+                "agent:gemini",
+                "--channel",
+                "MauiMessenger",
+                "--subject",
+                "Escalation",
+                "--body",
+                "Need approval for deploy window."
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "stopAtEntry": false,
+            "env": {
+                "AGENT_MESSENGER_CONFIG": "${workspaceFolder}/AgentMessenger.Console/appsettings.json"
+            }
+        },
+        {
+            "name": "AgentMessenger: agent to agent MauiMessenger (Gemini to OpenAI)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/AgentMessenger.Console/bin/Debug/net10.0/AgentMessenger.Console.dll",
+            "args": [
+                "send",
+                "--from",
+                "agent:gemini",
+                "--to",
+                "agent:openai",
+                "--channel",
+                "MauiMessenger",
+                "--subject",
+                "Escalation",
+                "--body",
+                "Need approval for deploy window."
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "stopAtEntry": false,
+            "env": {
+                "AGENT_MESSENGER_CONFIG": "${workspaceFolder}/AgentMessenger.Console/appsettings.json"
+            }
+        },
+        {
+            "name": "AgentMessenger: converse OpenAI and Gemini",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/AgentMessenger.Console/bin/Debug/net10.0/AgentMessenger.Console.dll",
+            "args": [
+                "converse",
+                "--from",
+                "agent:openai",
+                "--to",
+                "agent:gemini",
+                "--channel",
+                "MauiMessenger",
+                "--subject",
+                "Agent introduction",
+                "--turns",
+                "4",
+                "--delay-seconds",
+                "5",
+                "--prompt",
+                "Send a short friendly introduction to Gemini. Mention that you are testing AgentMessenger and invite Gemini to reply."
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "stopAtEntry": false,
+            "env": {
+                "AGENT_MESSENGER_CONFIG": "${workspaceFolder}/AgentMessenger.Console/appsettings.json"
+            }
+        },
+        {
+            "name": "AgentMessenger: inbox MauiMessenger",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/AgentMessenger.Console/bin/Debug/net10.0/AgentMessenger.Console.dll",
+            "args": [
+                "inbox",
+                "--owner",
+                "agent:ops",
+                "--channel",
+                "MauiMessenger"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "stopAtEntry": false,
+            "env": {
+                "AGENT_MESSENGER_CONFIG": "${workspaceFolder}/AgentMessenger.Console/appsettings.json"
+            }
+        }
+    ]
+}
